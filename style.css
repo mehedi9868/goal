@@ -110,11 +110,12 @@ body {
 
 .blog {
     width: 100%;
-    height: 312px;
+    height: auto;
     border: 1px solid #E8E8E8;
     border-radius: 10px;
     text-align: center;
 }
+
 .matches {
     display: flex;
     justify-content: space-evenly;
@@ -140,6 +141,20 @@ body {
 .blog p {
     font-weight: 700;
     font-size: medium;
+}
+
+/* tablet only button */
+#tablet-btn {
+    display: none;
+    margin: 0 auto;
+    font-size: 20px;
+    background-color: #DD0000;
+    color: #FFFFFF;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 10px;
+
+
 }
 
 
@@ -189,14 +204,71 @@ footer>hr {
 
 
 /* media queryes */
-@media only screen and (max-width:1100px){
+@media only screen and (max-width:1100px) {
     .blog-container {
-    grid-template-columns: repeat(2, 1fr);}
-}
-@media only screen and (max-width:576px){
-    .blog-container {
-    grid-template-columns: repeat(1, 1fr);}
-    .fixed-nav{
-        flex-direction: column-reverse;}
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .main-container {
+        flex-direction: column;
+    }
+
+    .fixed-nav {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    #tablet-btn {
+        display: block;
+
+    }
 }
 
+/* for mobile devices */
+
+@media only screen and (max-width:576px) {
+    .blog-container {
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+    .header-container {
+        flex-direction: column;
+    }
+
+    .header-right {
+        width: 80%;
+
+    }
+
+    .header-left {
+        margin: 0;
+        padding: 20px;
+    }
+
+    .header-left h1 {
+        font-size: 35px;
+    }
+
+    .main-container {
+        flex-direction: column;
+    }
+
+    #tablet-btn {
+        display: none;
+
+    }
+
+    .footer-menu {
+        flex-direction: column;
+    }
+
+    .fixed-nav {
+        background-color: #FFFFFF;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+
+
+}

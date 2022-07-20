@@ -197,6 +197,6 @@ footer>hr {
     .blog-container {
     grid-template-columns: repeat(1, 1fr);}
     .fixed-nav{
-        flex-direction: column-reverse;
+        flex-direction: column-reverse;}
 }
 

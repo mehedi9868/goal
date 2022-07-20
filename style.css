@@ -25,34 +25,49 @@ body {
 
 .header-left {
     width: 50%;
-    padding: 50px;
+    padding: 100px 50px 0 120px;
 }
 
 .header-left>h1 {
     font-weight: 700;
-    font-size: 70px;
+    font-size: 80px;
 
 }
 
-.header-left>button {
+.header-left p {
     font-size: 20px;
-    padding: 5px 10px;
+    margin-bottom: 20px;
+}
+
+.header-left>button {
+    font-size: 22px;
+    padding: 18px 40px;
     margin-top: 10px;
-    border-radius: 5px;
+    border-radius: 8px;
     background-color: #DD0000;
     color: #FFFFFF;
+    transition: 1s;
+}
+
+.header-left>button:hover {
+    background-color: #161616;
 }
 
 .header-right {
     width: 50%;
-    padding-left: 150px;
+    padding: 50px 50px 0 50px;
+}
+
+.header-right img {
+    width: 100%;
+
 }
 
 /* main section */
 .main-section {
     width: 80%;
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 150px;
 }
 
 .main-container {
@@ -61,23 +76,30 @@ body {
     gap: 50px;
 }
 
-.fixed-blog {
-    width: 312px;
-    height: 312px;
+/* fixed nav */
+
+.fixed-nav {
+    width: 100%;
+    height: 300px;
     background-color: #161616;
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    padding: 30px;
+    gap: 40px;
+    padding: 40px;
     border-radius: 10px;
 }
 
-.fixed-blog button {
+.fixed-nav button {
     padding: 20px;
     border-radius: 10px;
     border: 0;
     font-weight: 700;
-    font-size: 25px;
+    font-size: 22px;
+}
+
+.fixed-nav a {
+    text-decoration: none;
+    color: #161616;
 }
 
 .blog-container {
@@ -87,10 +109,16 @@ body {
 }
 
 .blog {
-    width: 312px;
-    height: 362px;
+    width: 100%;
+    height: 312px;
     border: 1px solid #E8E8E8;
     border-radius: 10px;
+    text-align: center;
+}
+.matches {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px;
 }
 
 .blog-text {
@@ -113,15 +141,6 @@ body {
     font-weight: 700;
     font-size: medium;
 }
-
-
-
-
-
-
-
-
-
 
 
 /* footer */
@@ -167,3 +186,17 @@ footer>hr {
 .social-links a i {
     font-size: 30px;
 }
+
+
+/* media queryes */
+@media only screen and (max-width:1100px){
+    .blog-container {
+    grid-template-columns: repeat(2, 1fr);}
+}
+@media only screen and (max-width:576px){
+    .blog-container {
+    grid-template-columns: repeat(1, 1fr);}
+    .fixed-nav{
+        flex-direction: column-reverse;
+}
+

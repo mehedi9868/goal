@@ -14,6 +14,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
     <!-- external css link -->
     <link rel="stylesheet" href="style.css">
+    <style>
+        .fixed-nav .selected {
+            background-color: #DD0000;
+        }
+
+        .selected a {
+            color: #FFFFFF ;
+        }
+    </style>
 </head>
 
 <body>
@@ -38,12 +47,13 @@
     <!-- header end -->
 
     <!-- main blog section start -->
+
     <main class="main-section">
         <div class="main-container">
             <div class="fixed-nav">
-                <button><a href="matches.html">Upcoming Match</a> </button>
+                <button ><a href="matches.html">Upcoming Match</a> </button>
                 <button><a href="groups.html">All Group</a> </button>
-                <button><a href="index.html">Blog</a> </button>
+                <button class="selected"><a href="index.html">Blog</a> </button>
             </div>
             <div class="blog-container">
                 <div class="blog">

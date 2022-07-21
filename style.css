@@ -12,11 +12,14 @@ body {
 
 .header-section {
     width: 80%;
+    height: auto;
     margin: 0 auto;
     margin-top: 100px;
 }
 
 .header-container {
+    height: 621px;
+    width: auto;
     background-color: #161616;
     display: flex;
     color: #FFFFFF;
@@ -31,6 +34,7 @@ body {
 .header-left>h1 {
     font-weight: 700;
     font-size: 80px;
+    line-height: 1.0;
 
 }
 
@@ -203,9 +207,13 @@ footer>hr {
 
 
 /* media queryes */
-@media only screen and (max-width:1100px) {
+@media only screen and (max-width:1660px) {
     .blog-container {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .header-container {
+        height: auto;
     }
 
     .main-container {
@@ -232,6 +240,7 @@ footer>hr {
     }
 
     .header-container {
+        height: auto;
         flex-direction: column;
     }
 
@@ -241,8 +250,9 @@ footer>hr {
     }
 
     .header-left {
-        margin: 0;
-        padding: 20px;
+        width: 100%;
+        padding: 20px ;
+        overflow: hidden;
     }
 
     .header-left h1 {
